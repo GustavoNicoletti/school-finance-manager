@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prévia - Gestão Escolar</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Inter, Segoe UI, Arial, sans-serif;
+        --bg: #f6f8fb;
+        --panel: #ffffff;
+        --line: #d9e2ec;
+        --primary: #1d4f91;
+        --green: #2f855a;
+        --red: #c2410c;
+        --orange: #b7791f;
+        --text: #172033;
+        --muted: #607086;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      .app {
+        display: grid;
+        grid-template-columns: 264px 1fr;
+        min-height: 100vh;
+      }
+
+      aside {
+        background: var(--panel);
+        border-right: 1px solid var(--line);
+        padding: 18px 12px;
+      }
+
+      .brand {
+        font-weight: 800;
+        font-size: 18px;
+        margin: 6px 10px 24px;
+        color: var(--primary);
+      }
+
+      nav {
+        display: grid;
+        gap: 6px;
+      }
+
+      nav a {
+        border-radius: 8px;
+        color: var(--text);
+        padding: 11px 12px;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      nav a.active {
+        background: var(--primary);
+        color: #fff;
+      }
+
+      main {
+        padding: 28px;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      p {
+        margin: 6px 0 0;
+        color: var(--muted);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(160px, 1fr));
+        gap: 16px;
+      }
+
+      .card,
+      .table {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+
+      .card {
+        padding: 18px;
+      }
+
+      .label {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .value {
+        font-size: 24px;
+        font-weight: 800;
+        margin-top: 8px;
+      }
+
+      .section {
+        margin-top: 24px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border-bottom: 1px solid var(--line);
+        font-size: 14px;
+        padding: 12px 14px;
+        text-align: left;
+      }
+
+      th {
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .right {
+        text-align: right;
+      }
+
+      .chip {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        display: inline-block;
+        font-size: 12px;
+        padding: 3px 9px;
+      }
+
+      .paid {
+        border-color: #9ae6b4;
+        color: var(--green);
+      }
+
+      .late {
+        border-color: #fed7aa;
+        color: var(--red);
+      }
+
+      .pending {
+        border-color: #fbd38d;
+        color: var(--orange);
+      }
+
+      @media (max-width: 900px) {
+        .app {
+          grid-template-columns: 1fr;
+        }
+
+        aside {
+          display: none;
+        }
+
+        main {
+          padding: 18px;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <aside>
+        <div class="brand">Gestão Escolar</div>
+        <nav>
+          <a class="active" href="#">Dashboard</a>
+          <a href="#">Alunos</a>
+          <a href="#">Responsáveis</a>
+          <a href="#">Contas a receber</a>
+          <a href="#">Contas a pagar</a>
+          <a href="#">Inadimplência</a>
+          <a href="#">Fluxo de caixa</a>
+          <a href="#">Usuários</a>
+          <a href="#">Auditoria</a>
+        </nav>
+      </aside>
+      <main>
+        <header>
+          <div>
+            <h1>Dashboard financeiro</h1>
+            <p>Resumo do mês atual.</p>
+          </div>
+        </header>
+        <section class="grid">
+          <div class="card">
+            <div class="label">Alunos ativos</div>
+            <div class="value">86</div>
+          </div>
+          <div class="card">
+            <div class="label">Receita prevista</div>
+            <div class="value">R$ 43.000,00</div>
+          </div>
+          <div class="card">
+            <div class="label">Receita recebida</div>
+            <div class="value">R$ 31.500,00</div>
+          </div>
+          <div class="card">
+            <div class="label">Saldo do mês</div>
+            <div class="value">R$ 18.200,00</div>
+          </div>
+        </section>
+        <section class="section table">
+          <table>
+            <thead>
+              <tr>
+                <th>Descrição</th>
+                <th>Aluno</th>
+                <th class="right">Valor</th>
+                <th>Vencimento</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mensalidade Junho</td>
+                <td>Ana Silva</td>
+                <td class="right">R$ 500,00</td>
+                <td>10/06/2026</td>
+                <td><span class="chip paid">Pago</span></td>
+              </tr>
+              <tr>
+                <td>Mensalidade Junho</td>
+                <td>Bruno Costa</td>
+                <td class="right">R$ 500,00</td>
+                <td>10/06/2026</td>
+                <td><span class="chip late">Atrasado</span></td>
+              </tr>
+              <tr>
+                <td>Material pedagógico</td>
+                <td>Carla Rocha</td>
+                <td class="right">R$ 120,00</td>
+                <td>20/06/2026</td>
+                <td><span class="chip pending">Pendente</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
