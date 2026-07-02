@@ -1,8 +1,8 @@
 # School Finance Manager
 
-Portfolio project for a school management system focused on financial control, student records and operational dashboards.
+Full-stack school management system focused on financial control, student records and operational dashboards.
 
-This repository is a sanitized public version. It does not include real school data, production credentials, infrastructure endpoints, private keys, database dumps or deployment secrets.
+The project was designed around a common school administration problem: keeping students, guardians, monthly charges, expenses, delinquency and cash flow organized in one place.
 
 ## Highlights
 
@@ -78,9 +78,9 @@ Expected local URLs:
 
 ## Environment
 
-Use the `.env.example` files as templates only. Replace every credential before using the project outside a local demo environment.
+Use the `.env.example` files as templates only. Replace every credential before using the project outside a local environment.
 
-This public version intentionally keeps infrastructure generic. Production domains, cloud resources, database hosts and secrets are not part of this repository.
+This repository keeps infrastructure configuration generic. Production domains, cloud resources, database hosts and secrets are not part of the codebase.
 
 ## Demo Data
 
@@ -111,4 +111,4 @@ npm run test:smoke:e2e
 
 ## Notes
 
-This project was built as a practical full-stack case study for school financial management. The public repository focuses on architecture, code organization, business rules and UI flows, not on exposing any real production environment.
+The repository uses synthetic data and placeholder configuration. It focuses on the application structure, financial rules, access control and user flows without exposing any real production environment.

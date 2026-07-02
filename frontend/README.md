@@ -1,6 +1,6 @@
 # Frontend
 
-React frontend for the School Finance Manager portfolio project.
+React frontend for School Finance Manager.
 
 ## Features
 
@@ -52,4 +52,4 @@ Optional environment variables:
 
 ## Notes
 
-The frontend uses `VITE_API_URL=/api` in local mode and the Vite proxy forwards requests to the backend. No production URL, bucket, distribution or private infrastructure configuration is included in this public version.
+The frontend uses `VITE_API_URL=/api` in local mode and the Vite proxy forwards requests to the backend. No production URL, bucket, distribution or private infrastructure configuration is included in this repository.

@@ -1,6 +1,6 @@
 # Backend
 
-FastAPI backend for the School Finance Manager portfolio project.
+FastAPI backend for School Finance Manager.
 
 ## Features
 
@@ -75,4 +75,4 @@ python -m pytest
 
 ## Security Notes
 
-This public repository contains only placeholders and demo credentials. For any real deployment, replace all values in `.env`, use a dedicated PostgreSQL user, configure explicit CORS origins and keep API docs disabled outside local mode.
+The repository contains only placeholders and demo credentials. For any real deployment, replace all values in `.env`, use a dedicated PostgreSQL user, configure explicit CORS origins and keep API docs disabled outside local mode.
